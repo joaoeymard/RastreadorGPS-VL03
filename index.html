@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacote de Rastreamento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label,
+    textarea,
+    input {
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      height: 450px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Decodificar Pacote de Rastreamento</h1>
+    <label for="inputPacote">Insira o Pacote de Rastreamento:</label>
+    <input type="text" id="inputPacote" placeholder="Digite o pacote hexadecimal"
+      value="78780a13050604000200c211900d0a,78782da4180613160e25cf015b0a4a04878e880019621002d40200009387000000000f896a0d460603c900ff00fae8bf0d0a,787829a0180614011201cf015b58e6048784180008b902d40200009387000000000f896a0d000e0000c1ef4f0d0a,787882f195f02d402b1a50000e701000000acc9ca0d0a,7878058a003d07790d0a,79790008940004f50176c22d0d0a,787826271806130c2213cf015b5ac4048784100118000902d402b1a50000e7450604c500ff00a2ea750d0a,78782222180614010f11cf015a5b320487a5e000080002d405036d004ebc000e00008527f50d0a,787811010350218700705977806d12c9016d51a10d0a">
+    <button onclick="processarPacote()">Processar Pacote</button>
+    <label for="outputTexto">Objeto Formatado:</label>
+    <textarea id="outputTexto" readonly></textarea>
+  </div>
+
+  <script src="patterns.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
